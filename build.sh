@@ -6,6 +6,9 @@ export CON_NAME=alpine_glibc_t
 export REG_URL=index.csphere.cn
 export IMAGE=microimages/alpine-glibc
 export TAGS="3.3 3"
+export BASE_IMAGE=alpine:3.3
+
+docker pull $BASE_IMAGE
 
 docker build -t $IMAGE .
 ./test.sh
